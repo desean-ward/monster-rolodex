@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 import { CardList } from './components/card-list/card-list.component.jsx';
-import {SearchBox } from './components/search-box/search-box.component.jsx';
+import { SearchBox } from './components/search-box/search-box.component.jsx';
 import './App.css';
 
 class App extends Component {
@@ -30,7 +30,8 @@ handleChange = (e) => {
 
 
   render() {
-    /* Destructure the array */
+    /* Destructure the array. Destructuring allows us to pull properties off of an object, and set them to constants
+       we place inside of the curly braces */
     const { monsters, searchField } = this.state;
  /* Create a new array (monster) and filter out the monsters (card-list) */
     const filteredMonsters = monsters.filter(monster => monster.name.toLowerCase().includes(searchField.toLowerCase()))
